@@ -1,0 +1,1 @@
+java -jar selenium-server-standalone-3.0.0-beta2.jar -role wd -port 6666 -hub http://localhost:4444/grid/register -browser browserName=chrome,maxInstances=5 -Dwebdriver.chrome.driver=chromedriver.exe

@@ -1,0 +1,11 @@
+/target/
+/target/
+/target/
+.settings
+drivers
+reports
+test-output
+.classpath
+.project
+lib/chromedriver.exe
+lib/selenium-server-standalone-3.0.0-beta2.jar
