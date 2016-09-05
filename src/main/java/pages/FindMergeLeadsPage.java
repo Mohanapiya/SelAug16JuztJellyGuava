@@ -6,9 +6,9 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import wrappers.OpentapsWrappers;
 
-public class FindMergeLeadPage extends OpentapsWrappers{
+public class FindMergeLeadsPage extends OpentapsWrappers{
 	
-	public FindMergeLeadPage(RemoteWebDriver driver, ExtentTest test){
+	public FindMergeLeadsPage(RemoteWebDriver driver, ExtentTest test){
 		this.driver = driver; 
 		this.test = test;
 		if(!verifyTitle("Find Leads")){
@@ -16,15 +16,15 @@ public class FindMergeLeadPage extends OpentapsWrappers{
 		}			
 	}
 	
-	public FindMergeLeadPage enterFistname(String data) {
+	public FindMergeLeadsPage enterFistname(String data) {
 		enterByName(prop.getProperty("FindMergeLead.Firstname.Name"), data);
 		return this;
 	}
-	public FindMergeLeadPage ClickFindLeadButton() {
+	public FindMergeLeadsPage ClickFindLeadButton() {
 		clickByXpath(prop.getProperty("FindMergeLead.FindLeadButton.Xpath"));
 		return this;
 	}
-	public FindMergeLeadPage ClickFirstResultingLead() {
+	public MergeLeadPage ClickFirstResultingLead() {
 		clickByXpath(prop.getProperty("FindMergeLead.FirstResultingLead.Xpath"));
 		switchToParentWindow();
 		return new MergeLeadPage(driver,test);
