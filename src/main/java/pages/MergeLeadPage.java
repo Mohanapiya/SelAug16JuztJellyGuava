@@ -27,12 +27,12 @@ public class MergeLeadPage extends OpentapsWrappers {
 		switchToLastWindow();
 		return new FindMergeLeadsPage(driver,test);
 	}
-	public ViewLeadPage mergeLead(){
+	public MergeLeadPage mergeLead(){
 		clickByLink(prop.getProperty("MergeLead.MergeButton.Link"));
-		acceptAlert();
-		return new ViewLeadPage(driver,test);
+		return this;
 	}
 	public ViewLeadPage confirmMerge(){
+		acceptAlert();
 		verifyTitle("View Lead | opentaps CRM");
 		return new ViewLeadPage(driver, test);
 	}
