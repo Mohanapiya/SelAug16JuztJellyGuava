@@ -16,26 +16,26 @@ public class EditLeadPage extends OpentapsWrappers {
 		}
 	}
 	
-	public EditLeadPage selectMarketingCampaign(String id ,String data){
+	public EditLeadPage selectMarketingCampaign(String data){
 		selectVisibileTextById(prop.getProperty("Select.MarkCampaign.Id"),data);//addMarketingCampaignForm_marketingCampaignId
 		return this;
 	}
 	
-	public EditLeadPage clickaddMark(String add){
+	public EditLeadPage clickaddMark(){
 		clickByXpath("clickadd.Market.xpath");//(//input[@class="smallSubmit"])[3]
 		return this;
 	}
 	
-	public EditLeadPage selectSource(String id ,String data){
+	public EditLeadPage selectSource(String data){
 		selectVisibileTextById(prop.getProperty("Select.Source.Id"),data); //addDataSourceForm_dataSourceId
 		return this;
 	}
 	
-	public EditLeadPage clickaddSource(String add){
+	public EditLeadPage clickaddSource(){
 		clickByXpath("clickadd.Source.xpath");//(//input[@class="smallSubmit"])[2]
 		return this;
 	}
-	public ViewLeadPage clickupdate(String update){
+	public ViewLeadPage clickupdate(){
 		clickByXpath("click.Update.xpath");//(//input[@class="smallSubmit"])[1]
 		return new ViewLeadPage(driver,test);
 	}

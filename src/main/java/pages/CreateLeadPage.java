@@ -37,12 +37,12 @@ public class CreateLeadPage extends OpentapsWrappers {
 		return new ViewLeadPage(driver,test);
 	}
 	
-	public CreateLeadPage selectIndustry(String id ,String data){
+	public CreateLeadPage selectIndustry(String data){
 		selectVisibileTextById(prop.getProperty("Select.Industy.Id"),data);//createLeadForm_industryEnumId
 		return this;
 	}
 	
-	public CreateLeadPage selectOwnership(String id ,String data){
+	public CreateLeadPage selectOwnership(String data){
 		selectVisibileTextById(prop.getProperty("Select.ownership.Id"),data); //createLeadForm_ownershipEnumId
 		return this;
 	}
