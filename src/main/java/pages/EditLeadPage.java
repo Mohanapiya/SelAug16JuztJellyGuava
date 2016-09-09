@@ -8,12 +8,13 @@ import wrappers.OpentapsWrappers;
 
 public class EditLeadPage extends OpentapsWrappers {
 
-	public EditLeadPage(RemoteWebDriver driver, ExtentTest test){
+	public EditLeadPage(RemoteWebDriver driver, ExtentTest test) throws InterruptedException{
 		this.driver = driver; 
 		this.test = test;
-		if(!verifyTitle(" opentaps CRM")){
-			reportStep("This is not Create Lead Page. Look at the SnapShot", "FAIL");
-		}
+		/*Thread.sleep(3000);
+		if(!verifyTitle("opentaps CRM")){
+			reportStep("This is not edit  Lead Page. Look at the SnapShot", "FAIL");
+		}*/
 	}
 	
 	public EditLeadPage selectMarketingCampaign(String data){
@@ -22,7 +23,7 @@ public class EditLeadPage extends OpentapsWrappers {
 	}
 	
 	public EditLeadPage clickaddMark(){
-		clickByXpath("clickadd.Market.xpath");//(//input[@class="smallSubmit"])[3]
+		clickByXpath(prop.getProperty("clickadd.Market.xpath"));//(//input[@class="smallSubmit"])[3]
 		return this;
 	}
 	
@@ -32,11 +33,11 @@ public class EditLeadPage extends OpentapsWrappers {
 	}
 	
 	public EditLeadPage clickaddSource(){
-		clickByXpath("clickadd.Source.xpath");//(//input[@class="smallSubmit"])[2]
+		clickByXpath(prop.getProperty("clickadd.Source.xpath"));//(//input[@class="smallSubmit"])[2]
 		return this;
 	}
 	public ViewLeadPage clickupdate(){
-		clickByXpath("click.Update.xpath");//(//input[@class="smallSubmit"])[1]
+		clickByXpath(prop.getProperty("click.Update.xpath"));//(//input[@class="smallSubmit"])[1]
 		return new ViewLeadPage(driver,test);
 	}
 	
